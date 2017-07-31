@@ -2,7 +2,6 @@
   "private": true,
   "name": "tns-template-master-detail-kinvey-ng",
   "displayName": "Master-Detail-Kinvey",
-  "templateType": "App template",
   "main": "main.js",
   "version": "1.0.0",
   "description": "Simple Master-Detail template for NativeScript apps with Kinvey data and support for editing using Angular",
