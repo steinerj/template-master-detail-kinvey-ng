@@ -1,8 +1,4 @@
 # NOTE: This template is currently WIP (work in progress). Do not use it in production!
-### Known issues with Kinvey SDK
-
- - [Android] save() method does not work correctly (it updates the remote store, but fails to update the local cache; as a result next time when the users opens the app, Kinvey detects there is a local / remote data discrepancy and fails to fetch the data -- https://github.com/Kinvey/nativescript-sdk/issues/16)
- - [iOS / Android] image uploads do not work altogether
 
 # NativeScript with Angular Master Detail Template
 App templates help you jump start your native cross-platform apps with built-in UI elements and best practices. Save time writing boilerplate code over and over again when you create new apps.
@@ -40,11 +36,14 @@ There is one model to represent the data items:
 The template also provides a data service:
 - `/cars/shared/car.service.ts` - serves as a data layer for the master-detail data items. Wraps the functions that are used to make operations on the Kinvey database.
 
+template also provides a data service:
+- `/cars/shared/car.service.ts` - serves as a data layer for the master-detail data items. Wraps the functions that are used to make operations on the Kinvey database.
+
 ### Kinvey integration
 The templates uses the [{N} Kinvey plugin](https://github.com/Kinvey/nativescript-sdk). The initialization is done before the app starts in the `/main.ts` file. The initialization script is located at `/shared/kinvey.common.ts`.
 
 ### [Optional] Kinvey database setup
-By design the app is connected to a read-only copy of the sample data in Kinvey. If you want to see the "edit" functionality in action you will have to clone the sample data and update the app configuration to point to your own Kinvey setup. You can find detailed instructions how to achieve that [here](https://github.com/NativeScript/template-master-detail-ng/blob/master/tools/kinvey/kinvey-database-setup.md).
+By design the app is connected to a read-only copy of the sample data in Kinvey. If you want to see the "edit" functionality in action you will have to clone the sample data and update the app configuration to point to your own Kinvey setup. You can find detailed instructions how to achieve that [here](https://github.com/NativeScript/template-master-detail-kinvey-ng/blob/master/tools/kinvey/kinvey-database-setup.md).
 
 ### Styling
 This template is set up to use SASS for styling. All classes used are based on the {N} core theme – consult the [documentation](https://docs.nativescript.org/angular/ui/theme.html#theme) to understand how to customize it. Check it out to see what classes you can use on which component.

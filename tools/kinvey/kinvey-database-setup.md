@@ -8,14 +8,14 @@ NOTE: This guide assumes that you have a working version of the master / detail 
 export class Config {
     static kinveyAppKey = "kid_Sy8CV9v7W";
     static kinveyAppSecret = "94d5019e0f45412b9dc419f94e019ca0";
-    static kinveyUsername = "";
-    static kinveyPassword = "";
+    static kinveyUsername = "[kinvey-username]"; /* see section below */
+    static kinveyPassword = "[kinvey-password]"; /* see section below */
 }
 ```
 
 ### Set up an app user
- - You will need an user through which the app will authenticate before the Kinvey database. Create new user from the **Users** section in the environment sidebar of your app.
- - Copy both the **Username** and **Password** from the given user and then replace them in `app/shared/config.ts`. For example if your Username is **admin** with Password **admin**, the updated config.ts will look like:
+ - Communication between the mobile app and Kinvey database requires authenticated access. For simplicity the app itself does not provide support for authentication / authorization so you will need to create a "system" user for testing purposes. In Kinvey navigate to the Users section in the environment sidebar to create new user.
+ - Copy both the **Username** and **Password** for the newly created user and then replace them in `app/shared/config.ts`. For example if your Username is **admin** with Password **admin**, the updated config.ts will look like:
 ```typescript
 export class Config {
     static kinveyAppKey = "kid_Sy8CV9v7W";
@@ -26,4 +26,4 @@ export class Config {
 ```
 
 ### Set up your Kinvey sample data
- - Create **'cars'** data collection, from the environment sidebar of your app, and import the [sample JSON data](https://github.com/NativeScript/template-master-detail-kinvey-ng/blob/master/tools/kinvey/car-rental-export-public.json) to it.
+ - In Kinvey create **'cars'** data collection, from the environment sidebar of your app, and import the [sample JSON data](https://github.com/NativeScript/template-master-detail-kinvey-ng/blob/master/tools/kinvey/car-rental-export-public.json) to it.
