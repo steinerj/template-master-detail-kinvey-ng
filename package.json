@@ -1,6 +1,6 @@
 {
   "name": "tns-template-master-detail-kinvey-ng",
-  "displayName": "Master-Detail-Kinvey",
+  "displayName": "Master-Detail with Kinvey",
   "templateType": "App template",
   "main": "main.js",
   "version": "1.0.0",
